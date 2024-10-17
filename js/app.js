@@ -10,8 +10,6 @@ botonPelicula.addEventListener("click", function () {
     .then(function (infoPelicula) {
       document.querySelector("#ocultar").style.display = "block";
       document.querySelector("#principal").style.display = "none";
-      // const titulo = document.querySelector("title");
-      // titulo.textContent = infoPelicula.Title;
       document.querySelector("#title").textContent = infoPelicula.Title;
       document.querySelector("#director").textContent =
         "Director: " + infoPelicula.Director;
