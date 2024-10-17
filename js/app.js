@@ -12,8 +12,16 @@ botonPelicula.addEventListener("click", function () {
         document.querySelector("#ocultar").style.display = "none";
         document.querySelector("#principal").style.display = "none";
         document.querySelector("#error").style.display = "block";
+        document.querySelector("#main").classList.remove("bg-secondary-subtle");
+        document.querySelector("#main").classList.remove("border-secondary");
+        document.querySelector("#main").classList.add("bg-warning-subtle");
+        document.querySelector("#main").classList.add("border-warning");
         imagen.innerHTML = "";
       } else {
+        document.querySelector("#main").classList.add("bg-secondary-subtle");
+        document.querySelector("#main").classList.add("border-secondary");
+        document.querySelector("#main").classList.remove("bg-warning-subtle");
+        document.querySelector("#main").classList.remove("border-warning");
         document.querySelector("#error").style.display = "none";
         document.querySelector("#ocultar").style.display = "block";
         document.querySelector("#principal").style.display = "none";
@@ -39,20 +47,5 @@ botonPelicula.addEventListener("click", function () {
           `<img src="${infoPelicula.Poster}" alt="Foto">`
         );
       }
-
-      // if (infoPelicula.Response === "False") {
-      //   document.querySelector("ocultar").style.display = "none";
-      //   document.querySelector("principal").style.display = "none";
-      //   document.querySelector("error").style.display = "block";
-      // }
-
-      // if (infoPelicula.Response === "False") {
-      //   document.querySelector("#principal").style.display = "none";
-      //   document.querySelector("#divDerecha").style.display = "none";
-      //   document.querySelector("#error").style.display = "block";
-      // } else {
-      //   document.querySelector("#divDerecha").style.display = "block";
-      //   document.querySelector("error").style.display = "none";
-      // }
     });
 });
