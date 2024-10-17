@@ -1,3 +1,7 @@
 #ocultar {
   display: none;
 }
+
+#error {
+  display: none;
+}
